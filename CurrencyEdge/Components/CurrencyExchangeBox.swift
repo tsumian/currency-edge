@@ -10,7 +10,7 @@ import SwiftUI
 struct CurrencyExchangeBox: View {
     @State private var currency: String
     @State private var amount: Double
-    
+
     init(currency: String, amount: Double) {
         self.currency = currency
         self.amount = amount
@@ -25,17 +25,23 @@ struct CurrencyExchangeBox: View {
                 currencylabel,
                 text: $currency
             )
+            .textFieldStyle(.plain) 
             .disableAutocorrection(true)
             .font(.title)
             .fontWeight(.bold)
+            .frame(maxWidth: .infinity)
+            .multilineTextAlignment(.leading)
 
             TextField(
                 amountLabel,
                 value: $amount,
                 format: .number.precision(.significantDigits(3)))
+            .textFieldStyle(.plain)
             .disableAutocorrection(true)
             .font(.title)
             .fontWeight(.bold)
+            .frame(maxWidth: .infinity)
+            .multilineTextAlignment(.trailing)
         }
         .textFieldStyle(.roundedBorder)
     }
