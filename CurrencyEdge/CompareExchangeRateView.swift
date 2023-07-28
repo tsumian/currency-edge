@@ -23,10 +23,21 @@ struct CompareExchangeRateView: View {
     var body: some View {
         VStack(alignment: .leading) {
             compareExchangeRatelabel
-            GroupBox("Saved Items") {
+            GroupBox() {
                 CurrencyExchangeBox(currency: "SGD", amount: 0.00);
                 CurrencyExchangeBox(currency: "EUR", amount: 0.00)
             }
+            .padding(.bottom)
+            Text("Other Exchange Rates")
+                .font(.headline)
+                .fontWeight(.bold)
+                .foregroundColor(.primary)
+            GroupBox() {
+                OtherExchangeRateBox(company: "Revolut", amount: 0.00)
+                OtherExchangeRateBox(company: "Wise", amount: 0.00)
+                OtherExchangeRateBox(company: "Airwallex", amount: 0.00)
+            }
+            .padding(.bottom)
             
         }
         .padding(.all, 30.0)

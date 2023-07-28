@@ -16,6 +16,7 @@
 		384C7E892A52D28300491A78 /* CurrencyEdgeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C7E882A52D28300491A78 /* CurrencyEdgeUITestsLaunchTests.swift */; };
 		384C7E962A5533B300491A78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C7E952A5533B300491A78 /* Constants.swift */; };
 		384C7E982A55399200491A78 /* CurrencyExchangeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C7E972A55399200491A78 /* CurrencyExchangeBox.swift */; };
+		38FE78942A73B90A001A2AF5 /* OtherExchangeRateBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FE78932A73B90A001A2AF5 /* OtherExchangeRateBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		384C7E882A52D28300491A78 /* CurrencyEdgeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyEdgeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		384C7E952A5533B300491A78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		384C7E972A55399200491A78 /* CurrencyExchangeBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeBox.swift; sourceTree = "<group>"; };
+		38FE78932A73B90A001A2AF5 /* OtherExchangeRateBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherExchangeRateBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,11 @@
 		384C7E6A2A52D28100491A78 /* CurrencyEdge */ = {
 			isa = PBXGroup;
 			children = (
+				38FE78952A73F40E001A2AF5 /* Components */,
 				384C7E6B2A52D28100491A78 /* CurrencyEdgeApp.swift */,
 				384C7E6D2A52D28100491A78 /* CompareExchangeRateView.swift */,
 				384C7E6F2A52D28300491A78 /* Assets.xcassets */,
 				384C7E952A5533B300491A78 /* Constants.swift */,
-				384C7E972A55399200491A78 /* CurrencyExchangeBox.swift */,
 				384C7E712A52D28300491A78 /* Preview Content */,
 			);
 			path = CurrencyEdge;
@@ -131,6 +133,15 @@
 				384C7E882A52D28300491A78 /* CurrencyEdgeUITestsLaunchTests.swift */,
 			);
 			path = CurrencyEdgeUITests;
+			sourceTree = "<group>";
+		};
+		38FE78952A73F40E001A2AF5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				384C7E972A55399200491A78 /* CurrencyExchangeBox.swift */,
+				38FE78932A73B90A001A2AF5 /* OtherExchangeRateBox.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FE78942A73B90A001A2AF5 /* OtherExchangeRateBox.swift in Sources */,
 				384C7E6E2A52D28100491A78 /* CompareExchangeRateView.swift in Sources */,
 				384C7E6C2A52D28100491A78 /* CurrencyEdgeApp.swift in Sources */,
 				384C7E962A5533B300491A78 /* Constants.swift in Sources */,
