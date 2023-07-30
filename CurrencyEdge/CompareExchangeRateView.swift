@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+struct ColoredGroupBox: GroupBoxStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        VStack {
+            configuration.content
+        }
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 8, style: .continuous)
+            .fill(Color.accentColor))
+    }
+}
+
 struct CompareExchangeRateView: View {
     let compareExchangeRatelabel: some View = Label {
         Text("Compare Rates")
@@ -19,7 +30,7 @@ struct CompareExchangeRateView: View {
             .scaleEffect(2)
     }
         .padding(.bottom)
-
+    
     var body: some View {
         VStack(alignment: .leading) {
             compareExchangeRatelabel
@@ -27,6 +38,7 @@ struct CompareExchangeRateView: View {
                 CurrencyExchangeBox(currency: "SGD", amount: 0.00);
                 CurrencyExchangeBox(currency: "EUR", amount: 0.00)
             }
+            .groupBoxStyle(ColoredGroupBox())
             .padding(.bottom)
             Text("Other Exchange Rates")
                 .font(.headline)
@@ -37,8 +49,8 @@ struct CompareExchangeRateView: View {
                 OtherExchangeRateBox(company: "Wise", amount: 0.00)
                 OtherExchangeRateBox(company: "Airwallex", amount: 0.00)
             }
+            .groupBoxStyle(ColoredGroupBox())
             .padding(.bottom)
-            
         }
         .padding(.all, 30.0)
     }
