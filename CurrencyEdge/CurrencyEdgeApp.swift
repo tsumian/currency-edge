@@ -11,7 +11,7 @@ import SwiftUI
 struct CurrencyEdgeApp: App {
     var body: some Scene {
         WindowGroup {
-            CompareExchangeRateView()
+            RootView()
         }
     }
 }
